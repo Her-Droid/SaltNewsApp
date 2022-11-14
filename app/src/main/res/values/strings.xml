@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Salt News</string>
+    <string name="title_headlines">Top Headlines</string>
+    <string name="title_cat_technology">Technology</string>
+    <string name="title_content_des_search">Image Search</string>
+    <string name="title_search">Search News</string>
+    <string name="title_readmore">Read More</string>
+    <string name="title_content_des_img_back">Image Back</string>
+    <string name="title_categories">Categories</string>
+    <string name="title_sub_categories">Select a category</string>
+    <string name="title_source">News Sources</string>
+    <string name="title_articles">News Articles</string>
+</resources>

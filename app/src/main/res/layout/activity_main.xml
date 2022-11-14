@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="-16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/app_name"
+                android:fontFamily="@font/ff_cocon"
+                android:gravity="center"
+                android:textSize="@dimen/font_20"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_45"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/bg_search"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/size_38"
+                    android:layout_height="@dimen/size_38"
+                    android:layout_marginStart="4dp"
+                    android:contentDescription="@string/title_content_des_search"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_search" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="@string/title_search"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewCategories"
+                android:layout_width="@dimen/spacing_medium"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:fontFamily="@font/semibold"
+                android:text="@string/title_categories"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintBottom_toBottomOf="@+id/viewCategories"
+                app:layout_constraintStart_toEndOf="@+id/viewCategories"
+                app:layout_constraintTop_toTopOf="@+id/viewCategories" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintTop_toBottomOf="@+id/viewCategories" />
+
+            <View
+                android:id="@+id/viewHeadlines"
+                android:layout_width="@dimen/spacing_medium"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvCategories" />
+
+            <TextView
+                android:id="@+id/tvHeadlines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:fontFamily="@font/semibold"
+                android:text="@string/title_headlines"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintBottom_toBottomOf="@+id/viewHeadlines"
+                app:layout_constraintStart_toEndOf="@+id/viewHeadlines"
+                app:layout_constraintTop_toTopOf="@+id/viewHeadlines" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHeadlines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintTop_toBottomOf="@+id/viewHeadlines" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shHeadlines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/viewHeadlines">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/placeholder_news" />
+
+                        <include layout="@layout/placeholder_news" />
+
+                        <include layout="@layout/placeholder_news" />
+
+                        <include layout="@layout/placeholder_news" />
+
+                        <include layout="@layout/placeholder_news" />
+
+                    </LinearLayout>
+                </ScrollView>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

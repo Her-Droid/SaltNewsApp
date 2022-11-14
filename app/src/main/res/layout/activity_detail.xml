@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_circle_primary"
+                android:padding="@dimen/size_5"
+                android:src="@drawable/ic_back_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/imgShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_circle_primary"
+                android:padding="@dimen/size_5"
+                android:src="@drawable/ic_share_24"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:textSize="@dimen/font_20"
+        android:fontFamily="@font/bold"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="Covid 19"/>
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        style="@style/textLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:textSize="@dimen/font_14"
+        android:fontFamily="@font/light"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="10 mei 2020"/>
+
+    <ImageView
+        android:id="@+id/imgThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_200"
+        android:layout_marginTop="@dimen/margin_16"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateTime"/>
+
+    <TextView
+        android:id="@+id/tvNameSource"
+        style="@style/textLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:textSize="@dimen/font_14"
+        android:fontFamily="@font/light"
+        app:layout_constraintTop_toBottomOf="@+id/imgThumbnail"
+        tools:text="Kompas TV"/>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:textSize="@dimen/font_16"
+        android:fontFamily="@font/regular"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameSource"
+        tools:text="content"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

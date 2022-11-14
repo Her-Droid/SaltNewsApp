@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameListNews"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:layout_marginTop="@dimen/margin_16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgThumbnail"
+            android:layout_width="@dimen/size_100"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="10dip" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="1 jam yang lalu"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/regular"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_16"
+            app:layout_constraintStart_toEndOf="@+id/imgThumbnail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNameSource"
+            style="@style/textLight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            tools:text="CNN Indonesia"
+            android:textSize="12sp"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:fontFamily="@font/light"
+            android:layout_marginStart="@dimen/margin_16"
+            app:layout_constraintStart_toEndOf="@+id/imgThumbnail"
+            app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:lineSpacingExtra="3dp"
+            tools:text="Makin Panas, Hotma Sitompul Ungkap Desiree ke Bali dengan Pria Lain - InsertLive"
+            android:textSize="14sp"
+            android:fontFamily="@font/regular"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_16"
+            app:layout_constraintStart_toEndOf="@+id/imgThumbnail"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameSource"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:text="April 18, 2021"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10sp"
+            android:fontFamily="@font/regular"
+            android:layout_marginStart="@dimen/margin_16"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:layout_constraintStart_toEndOf="@id/imgThumbnail"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_300"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

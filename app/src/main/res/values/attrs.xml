@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="iconColor" format="color"/>
+    <attr name="iconToolbar" format="color"/>
+    <attr name="strokeColor" format="color"/>
+    <attr name="searchColor" format="color"/>
+    <attr name="cardLinkColor" format="color"/>
+    <attr name="cardBackgroundColor" format="color"/>
+</resources>

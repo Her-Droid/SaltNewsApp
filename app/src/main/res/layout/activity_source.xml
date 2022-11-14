@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.source.SourceActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="-16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_circle_primary"
+                android:padding="@dimen/size_5"
+                android:src="@drawable/ic_back_24"
+                android:layout_marginStart="@dimen/margin_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/semibold"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textSize="@dimen/font_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey_300"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <View
+        android:id="@+id/viewSource"
+        android:layout_width="@dimen/spacing_medium"
+        android:layout_height="@dimen/size_20"
+        android:background="@color/colorPrimary"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:text="@string/title_source"
+        android:textSize="@dimen/font_16"
+        android:fontFamily="@font/semibold"
+        app:layout_constraintBottom_toBottomOf="@+id/viewSource"
+        app:layout_constraintStart_toEndOf="@+id/viewSource"
+        app:layout_constraintTop_toTopOf="@+id/viewSource" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSource"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSource" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/emptyLottie"
+        android:layout_width="@dimen/size_200"
+        android:layout_height="@dimen/size_200"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:lottie_rawRes="@raw/empty"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:lottie_loop="true" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shSource"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSource">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/placeholder_source" />
+                <include layout="@layout/placeholder_source" />
+                <include layout="@layout/placeholder_source" />
+                <include layout="@layout/placeholder_source" />
+                <include layout="@layout/placeholder_source" />
+
+            </LinearLayout>
+        </ScrollView>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
