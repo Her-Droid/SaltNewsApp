@@ -3,7 +3,6 @@ This App Using API https://newsapi.org
 
 ## Feature
 - Showing  Top Headlines
-- Displays a list of sources based on the selected category
 - Displays a list of articles / news based on the selected source
 - Displaying News / Article Details based on the selected news
 - Displays the website in the form of a Web View when the user clicks on **Read Full News**
