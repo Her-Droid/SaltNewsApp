@@ -18,9 +18,9 @@ This App Using API https://newsapi.org
 ## Screenshot
 ![Capture](https://ik.imagekit.io/trafcjapy/WhatsApp_Image_2022-11-15_at_3.11.19_PM.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1668503068261)
 
-![Capture2](https://user-images.githubusercontent.com/10163868/126959678-47b119e8-a813-4767-a648-01839e2ad705.PNG)
+![Capture2](https://ik.imagekit.io/trafcjapy/WhatsApp_Image_2022-11-15_at_3.11.19_PM__1_.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1668503068215)
 
-![Capture3](https://user-images.githubusercontent.com/10163868/126959694-0111e324-7edf-41a0-9e2e-e0bc15427ea5.PNG)
+![Capture3](https://ik.imagekit.io/trafcjapy/WhatsApp_Image_2022-11-15_at_3.11.18_PM.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1668503068329)
 
 
 
