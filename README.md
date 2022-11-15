@@ -16,11 +16,11 @@ This App Using API https://newsapi.org
 # SaltNewsApp
 
 ## Screenshot
-![Capture](https://ik.imagekit.io/trafcjapy/WhatsApp_Image_2022-11-15_at_3.11.19_PM.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1668503068261)
-
-![Capture2](https://ik.imagekit.io/trafcjapy/WhatsApp_Image_2022-11-15_at_3.11.19_PM__1_.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1668503068215)
-
-![Capture3](https://ik.imagekit.io/trafcjapy/WhatsApp_Image_2022-11-15_at_3.11.18_PM.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1668503068329)
+<p align="center">
+<img src="[artifacts.png](https://ik.imagekit.io/trafcjapy/WhatsApp_Image_2022-11-15_at_3.11.19_PM.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1668503068261)" width="235" height="450"/>
+<img src="https://ik.imagekit.io/trafcjapy/WhatsApp_Image_2022-11-15_at_3.11.19_PM__1_.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1668503068215" width="235" height="450"/>
+<img src="[artifacts/screenshot_3.pn](https://ik.imagekit.io/trafcjapy/WhatsApp_Image_2022-11-15_at_3.11.18_PM.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1668503068329)g" width="235" height="450"/>
+</p>
 
 
 
