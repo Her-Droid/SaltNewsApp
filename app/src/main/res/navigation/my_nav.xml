@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/newsFragment">
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="id.herdroid.newsapp.ui.newsList.NewsFragment"
+        android:label="News - Top Headlines"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_newsFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="id.herdroid.newsapp.ui.newsDetails.NewsDetailsFragment"
+        android:label="News Details"
+        tools:layout="@layout/fragment_news_details"
+        />
+    <fragment
+        android:id="@+id/bookmarkedFragment"
+        android:name="id.herdroid.newsapp.ui.bookmarked.BookmarkedFragment"
+        android:label="Bookmarked News"
+        tools:layout="@layout/fragment_bookmarked" >
+        <action
+            android:id="@+id/action_bookmarkedFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
+</navigation>
